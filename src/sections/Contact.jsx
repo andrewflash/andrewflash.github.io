@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, MapPin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
+import { FaLinkedin } from 'react-icons/fa';
 import '../styles/Contact.css';
 
 const Contact = () => {
@@ -50,9 +51,9 @@ const Contact = () => {
 
                             <a href="https://linkedin.com/in/andrirahmadhani" target="_blank" rel="noopener noreferrer" className="contact-item group">
                                 <div className="icon-box">
-                                    <Linkedin size={24} className="icon-contact" />
+                                    <FaLinkedin size={24} className="icon-contact" />
                                 </div>
-                                <span>Andrew Flash</span>
+                                <span>Andri Rahmadhani</span>
                             </a>
 
                             <div className="contact-item group">
@@ -121,7 +122,6 @@ const Contact = () => {
                     <div className="footer-links">
                         <a href="https://github.com/andrewflash" className="footer-link">GitHub</a>
                         <a href="https://id.linkedin.com/in/andrirahmadhani" className="footer-link">LinkedIn</a>
-                        <a href="#" className="footer-link">Twitter</a>
                     </div>
                 </div>
             </div>
