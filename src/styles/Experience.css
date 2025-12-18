@@ -184,6 +184,7 @@
     .experience-item.left,
     .experience-item.right {
         left: 0;
+        text-align: left;
     }
 
     .left .exp-meta {
