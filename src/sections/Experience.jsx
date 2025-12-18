@@ -77,16 +77,24 @@ const Experience = () => {
                     <div className="timeline-line"></div>
 
                     {experiences.map((exp, index) => (
-                        <motion.div
+                        <div
                             key={index}
-                            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
                             className={`experience-item ${index % 2 === 0 ? 'left' : 'right'}`}
                         >
-                            <div className="timeline-dot"></div>
-                            <div className="glass-card experience-card">
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0, x: "-50%" }}
+                                whileInView={{ opacity: 1, scale: 1, x: "-50%" }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: index * 0.1 }}
+                                className="timeline-dot"
+                            />
+                            <motion.div
+                                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className="glass-card experience-card"
+                            >
                                 <div className="exp-header">
                                     <div className="exp-role-group">
                                         <h3 className="exp-role">{exp.role}</h3>
@@ -115,8 +123,8 @@ const Experience = () => {
                                         <span key={i} className="exp-tech-tag">{tech}</span>
                                     ))}
                                 </div>
-                            </div>
-                        </motion.div>
+                            </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>
