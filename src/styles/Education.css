@@ -1,0 +1,107 @@
+/* Education Styles */
+.education-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .education-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.edu-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.edu-card {
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s;
+}
+
+.edu-card:hover {
+    border-color: rgba(6, 182, 212, 0.3);
+}
+
+.edu-logo-bg {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    width: 6rem;
+    height: 6rem;
+    opacity: 0.15;
+    transition: all 0.3s;
+    filter: grayscale(100%) invert(1);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.edu-card:hover .edu-logo-bg {
+    opacity: 0.3;
+    transform: translateY(-50%) scale(1.1);
+    filter: grayscale(0%) invert(1);
+}
+
+.edu-bg-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.edu-header {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.edu-degree {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.edu-year {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.75rem;
+    background: rgba(6, 182, 212, 0.1);
+    color: var(--primary);
+    border-radius: 0.25rem;
+}
+
+.edu-school {
+    position: relative;
+    z-index: 1;
+    color: var(--primary);
+    /* Adapted for theme */
+    margin-bottom: 0.5rem;
+}
+
+.edu-desc {
+    position: relative;
+    z-index: 1;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+[data-theme='light'] .edu-logo-bg {
+    filter: grayscale(100%);
+    /* No invert for light mode */
+    opacity: 0.1;
+}
+
+[data-theme='light'] .edu-card:hover .edu-logo-bg {
+    filter: grayscale(0%);
+    /* Restore original colors */
+    opacity: 0.2;
+}
