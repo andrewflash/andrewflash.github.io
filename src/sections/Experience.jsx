@@ -55,54 +55,60 @@ const Experience = () => {
                 </motion.div>
 
                 <div className="experience-timeline">
-                    <div className="timeline-line"></div>
+                    <div className="scroll-fade-overlay-top"></div>
+                    <div className="experience-scroll-container">
+                        <div className="experience-track">
+                            <div className="timeline-line"></div>
 
-                    {experiences.map((exp, index) => (
-                        <div
-                            key={index}
-                            className={`experience-item ${index % 2 === 0 ? 'left' : 'right'}`}
-                        >
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0, x: "-50%" }}
-                                whileInView={{ opacity: 1, scale: 1, x: "-50%" }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.4, delay: index * 0.1 }}
-                                className="timeline-dot"
-                            />
-                            <motion.div
-                                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="glass-card experience-card"
-                            >
-                                <div className="exp-header">
-                                    <div className="exp-role-group">
-                                        <h3 className="exp-role">{exp.role}</h3>
-                                        <h4 className="exp-company">{exp.company}</h4>
-                                    </div>
-                                    <div className="exp-meta">
-                                        <span className="exp-date">
-                                            <Calendar size={14} className="mr-1" /> {exp.period}
-                                        </span>
-                                        <span className="exp-loc">
-                                            <MapPin size={14} className="mr-1" /> {exp.location}
-                                        </span>
-                                    </div>
+                            {experiences.map((exp, index) => (
+                                <div
+                                    key={index}
+                                    className={`experience-item ${index % 2 === 0 ? 'left' : 'right'}`}
+                                >
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0, x: "-50%" }}
+                                        whileInView={{ opacity: 1, scale: 1, x: "-50%" }}
+                                        viewport={{ once: true }} // Keep once: true, but maybe margin?
+                                        transition={{ duration: 0.4, delay: index * 0.1 }}
+                                        className="timeline-dot"
+                                    />
+                                    <motion.div
+                                        initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                                        className="glass-card experience-card"
+                                    >
+                                        <div className="exp-header">
+                                            <div className="exp-role-group">
+                                                <h3 className="exp-role">{exp.role}</h3>
+                                                <h4 className="exp-company">{exp.company}</h4>
+                                            </div>
+                                            <div className="exp-meta">
+                                                <span className="exp-date">
+                                                    <Calendar size={14} className="mr-1" /> {exp.period}
+                                                </span>
+                                                <span className="exp-loc">
+                                                    <MapPin size={14} className="mr-1" /> {exp.location}
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <p className="exp-desc leading-relaxed text-slate-300 mb-6">
+                                            {exp.desc}
+                                        </p>
+
+                                        <div className="exp-tech-stack">
+                                            {exp.technologies.map((tech, i) => (
+                                                <span key={i} className="exp-tech-tag">{tech}</span>
+                                            ))}
+                                        </div>
+                                    </motion.div>
                                 </div>
-
-                                <p className="exp-desc leading-relaxed text-slate-300 mb-6">
-                                    {exp.desc}
-                                </p>
-
-                                <div className="exp-tech-stack">
-                                    {exp.technologies.map((tech, i) => (
-                                        <span key={i} className="exp-tech-tag">{tech}</span>
-                                    ))}
-                                </div>
-                            </motion.div>
+                            ))}
                         </div>
-                    ))}
+                    </div>
+                    <div className="scroll-fade-overlay"></div>
                 </div>
             </div>
         </section>

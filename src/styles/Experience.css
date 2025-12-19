@@ -1,17 +1,84 @@
 .experience-timeline {
     position: relative;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 0;
+    /* Remove padding from outer, move to track if needed */
+}
+
+.experience-scroll-container {
+    max-height: 600px;
+    overflow-y: auto;
+    padding: 0 0 2rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) transparent;
+    position: relative;
+}
+
+.experience-scroll-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.experience-scroll-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.experience-scroll-container::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+.experience-track {
+    position: relative;
+    width: 100%;
+    padding-top: 0;
+}
+
+.timeline-line+.experience-item {
+    margin-top: 120px;
+}
+
+.scroll-fade-overlay-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, var(--bg-primary), transparent);
+    pointer-events: none;
+    z-index: 20;
+}
+
+[data-theme='light'] .scroll-fade-overlay-top {
+    background: linear-gradient(to bottom, var(--bg-primary), transparent);
+}
+
+.scroll-fade-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to bottom, transparent, var(--bg-primary));
+    pointer-events: none;
+    z-index: 20;
+}
+
+[data-theme='light'] .scroll-fade-overlay {
+    background: linear-gradient(to bottom, transparent, var(--bg-primary));
 }
 
 .timeline-line {
     position: absolute;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 2px;
     height: 100%;
-    background: linear-gradient(to bottom, var(--primary), var(--secondary), transparent);
+    /* Fade in from top (transparent -> primary) and fade out at bottom */
+    background: linear-gradient(to bottom, transparent 0%, var(--primary) 15%, var(--secondary) 85%, transparent 100%);
     z-index: 1;
 }
 
