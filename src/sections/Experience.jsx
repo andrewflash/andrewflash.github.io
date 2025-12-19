@@ -10,14 +10,28 @@ const Experience = () => {
             company: "Miota",
             period: "2023 - Present",
             location: "Jakarta, Indonesia (Hybrid)",
+            logo: "/logos/miota.svg",
+            fallback: "https://ui-avatars.com/api/?name=Miota&background=0D8ABC&color=fff",
             desc: "Leading the engineering division to architect end-to-end IoT solutions for mass-scale deployments in utilities and industrial safety. Key achievements include deploying a WiFi HaLow mesh network delivering 3x coverage compared to conventional systems, implementing direct-to-satellite monitoring for remote assets via Starlink, and developing a high-precision Bridge Collision Avoidance System using multi-sensor fusion (LiDAR, Water Current).",
             technologies: ["WiFi HaLow", "Satellite IoT", "Biometrics", "Embedded Linux", "Team Leadership"]
+        },
+        {
+            role: "Head of Technology (Consultant)",
+            company: "PalmVB",
+            period: "2024 - 2025",
+            location: "Singapore (Remote)",
+            logo: "/logos/palmvb.svg",
+            fallback: "https://ui-avatars.com/api/?name=PalmVB&background=06B6D4&color=fff",
+            desc: "Led the end-to-end development of biometric and IoT solutions, managing a multidisciplinary team to deliver over 4 product prototypes. Responsible for full-cycle development across hardware, firmware, and cloud architecture, I transformed early-stage ideas into scalable, secure systems ready for pilot deployment. Key achievements include designing robust biometric authentication platforms and IoT connectivity infrastructures for client sites.",
+            technologies: ["Biometrics", "IoT", "Cloud Architecture", "Hardware Design", "Team Leadership"]
         },
         {
             role: "Solutions Architect & Technical Lead",
             company: "NTT Indonesia Technology",
             period: "2019 - 2023",
             location: "Jakarta, Indonesia",
+            logo: "/logos/ntt.svg",
+            fallback: "https://ui-avatars.com/api/?name=NTT&background=002088&color=fff",
             desc: "Led technical pre-sales and solution architecture for large-scale Smart City and Enterprise IoT projects. Designed comprehensive Smart Traffic Systems utilizing CCTV analytics for real-time congestion prediction and vehicle counting, and architected unified dashboards for city-wide sensor networks to enhance urban management efficiency.",
             technologies: ["Computer Vision", "Smart City", "Data Analytics", "System Architecture"]
         },
@@ -26,6 +40,8 @@ const Experience = () => {
             company: "Bukalapak",
             period: "2018 - 2019",
             location: "Jakarta, Indonesia",
+            logo: "/logos/bukalapak.svg",
+            fallback: "https://ui-avatars.com/api/?name=Bukalapak&background=E31E2D&color=fff",
             desc: "Engineered hardware-software integration for logistics automation and fintech infrastructure. Notable contributions include developing QR-navigated Automated Guided Vehicles (AGVs) to optimize warehouse operations and building AI-assisted smart cameras on Raspberry Pi for localized object detection and analytics.",
             technologies: ["Robotics (AGV)", "Raspberry Pi", "OpenCV", "Edge AI", "MQTT"]
         },
@@ -34,6 +50,9 @@ const Experience = () => {
             company: "Wirecard",
             period: "2018",
             location: "Jakarta, Indonesia",
+            logo: "/logos/wirecard.svg",
+            fallback: "https://ui-avatars.com/api/?name=Wirecard&background=040F22&color=fff",
+            invertDark: true,
             desc: "Developed secure firmware for EMV-compliant payment terminals (EDC/POS), ensuring strict adherence to PCI-DSS security standards for financial transactions and robust device communication protocols.",
             technologies: ["Embedded C/C++", "EMV Level 1/2", "PCI-DSS", "Verifone OS"]
         }
@@ -80,17 +99,30 @@ const Experience = () => {
                                         className="glass-card experience-card"
                                     >
                                         <div className="exp-header">
-                                            <div className="exp-role-group">
-                                                <h3 className="exp-role">{exp.role}</h3>
-                                                <h4 className="exp-company">{exp.company}</h4>
+                                            <div className="exp-logo-container">
+                                                <img
+                                                    src={exp.logo}
+                                                    alt={`${exp.company} logo`}
+                                                    className={`exp-logo ${exp.invertDark ? 'invert-dark' : ''}`}
+                                                    onError={(e) => {
+                                                        e.currentTarget.src = exp.fallback;
+                                                        e.currentTarget.onerror = null;
+                                                    }}
+                                                />
                                             </div>
-                                            <div className="exp-meta">
-                                                <span className="exp-date">
-                                                    <Calendar size={14} className="mr-1" /> {exp.period}
-                                                </span>
-                                                <span className="exp-loc">
-                                                    <MapPin size={14} className="mr-1" /> {exp.location}
-                                                </span>
+                                            <div className="exp-content-header">
+                                                <div className="exp-role-group">
+                                                    <h3 className="exp-role">{exp.role}</h3>
+                                                    <h4 className="exp-company">{exp.company}</h4>
+                                                </div>
+                                                <div className="exp-meta">
+                                                    <span className="exp-date">
+                                                        <Calendar size={14} className="mr-1" />&nbsp;{exp.period}
+                                                    </span>
+                                                    <span className="exp-loc">
+                                                        <MapPin size={14} className="mr-1" />&nbsp;{exp.location}
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
 

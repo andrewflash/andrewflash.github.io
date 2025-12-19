@@ -1,6 +1,6 @@
 .experience-timeline {
     position: relative;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0;
     /* Remove padding from outer, move to track if needed */
@@ -128,6 +128,8 @@
     padding: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
 }
 
 .experience-card:hover {
@@ -136,12 +138,50 @@
     border-color: var(--primary);
 }
 
+/* Logo Styling */
+.exp-logo-container {
+    flex-shrink: 0;
+}
+
+.exp-logo {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+}
+
+[data-theme='dark'] .invert-dark {
+    filter: brightness(0) invert(1);
+}
+
+/* Header Layout */
 .exp-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 0.75rem;
+    position: relative;
+    z-index: 1;
 }
 
+.experience-item.left .exp-header {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.experience-item.right .exp-header {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.exp-content-header {
+    width: 100%;
+}
+
+/* Remove old background styles if any remain */
+
+/* Remove old flex header styles */
 .exp-role {
     font-size: 1.25rem;
     font-weight: 700;
@@ -164,21 +204,38 @@
     color: var(--text-muted);
 }
 
-.left .exp-meta {
-    align-items: flex-end;
-}
-
-.exp-date,
-.exp-loc {
-    display: flex;
-    align-items: center;
-}
-
 .exp-desc {
     color: var(--text-secondary);
     margin-bottom: 1rem;
     font-size: 0.95rem;
     line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* ... keep highlights ... */
+/* ... */
+.exp-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 1;
+}
+
+/* ... */
+
+/* Responsive: Mobile overrides */
+@media (max-width: 768px) {
+    /* ... existing ... */
+
+    /* On mobile, align everything left, put logo on right (or keep left if "outer"?) */
+    /* Mobile implies "Left items" are now just "Items" usually aligned left. */
+    /* The CSS makes them all Left aligned text. */
+    /* So putting logo on Right seems balanced. */
+
+
 }
 
 .exp-highlights {
@@ -251,6 +308,11 @@
     .experience-item.left,
     .experience-item.right {
         left: 0;
+        text-align: left;
+    }
+
+    .experience-item.left .exp-header {
+        align-items: flex-start;
         text-align: left;
     }
 
