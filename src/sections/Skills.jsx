@@ -8,14 +8,14 @@ const Skills = () => {
         {
             title: "Wireless & IoT Protocols",
             skills: [
-                { name: "LoRaWAN", icon: "https://upload.wikimedia.org/wikipedia/commons/4/4e/LoRaWAN_logo.svg" },
-                { name: "WiFi HaLow", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/WiFi_Logo.svg/320px-WiFi_Logo.svg.png" },
-                { name: "Zigbee", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Zigbee_logo.svg/320px-Zigbee_logo.svg.png" },
-                { name: "Bluetooth LE", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Bluetooth_Logo_%282023%29.svg/320px-Bluetooth_Logo_%282023%29.svg.png" },
-                { name: "MQTT", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Iot-mqtt.svg/100px-Iot-mqtt.svg.png" }, // Generic IoT/MQTT representation or keep text if fail
-                { name: "Thread", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Thread_Group_Logo.svg/320px-Thread_Group_Logo.svg.png" },
-                { name: "Matter", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Matter_mark.svg/320px-Matter_mark.svg.png" },
-                { name: "Mesh Networking", icon: "https://cdn-icons-png.flaticon.com/512/3660/3660463.png" } // Generic node
+                { name: "LoRaWAN", icon: "https://upload.wikimedia.org/wikipedia/commons/1/13/LoRaWAN_Logo.svg" },
+                { name: "WiFi", icon: "https://upload.wikimedia.org/wikipedia/commons/a/ae/WiFi_Logo.svg" },
+                { name: "Zigbee", icon: "https://upload.wikimedia.org/wikipedia/commons/1/1e/Zigbee_logo.svg" },
+                { name: "BLE", icon: "https://upload.wikimedia.org/wikipedia/commons/e/e1/Bluetooth_Figure_Mark_Logo.svg" },
+                { name: "MQTT", icon: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Mqtt-hor.svg" },
+                { name: "Thread", icon: "https://upload.wikimedia.org/wikipedia/commons/c/c0/Thread_Group_wordmark.svg" },
+                { name: "Matter", icon: "https://upload.wikimedia.org/wikipedia/commons/9/99/Logo_of_Matter_connectivity_standard.svg" },
+                { name: "Mesh Networking", icon: "https://upload.wikimedia.org/wikipedia/commons/b/b8/FullMeshNetwork.svg" } // Generic node
             ]
         },
         {
@@ -25,8 +25,8 @@ const Skills = () => {
                 { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
                 { name: "Embedded Linux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
                 { name: "Zephyr RTOS", icon: "https://raw.githubusercontent.com/zephyrproject-rtos/zephyr/main/doc/_static/images/logo.svg" },
-                { name: "OpenWRT", icon: "https://upload.wikimedia.org/wikipedia/commons/2/22/OpenWrt_logo_2016.svg" },
-                { name: "FreeRTOS", icon: "https://upload.wikimedia.org/wikipedia/commons/3/3a/FreeRTOS_Logo.jpg" }, // Need careful styling for white bg
+                { name: "OpenWRT", icon: "https://upload.wikimedia.org/wikipedia/commons/8/84/OpenWrt_Logo.svg" },
+                { name: "FreeRTOS", icon: "https://upload.wikimedia.org/wikipedia/commons/3/3e/FreeRTOS_logo_2005.svg" },
                 { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
                 { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" }
             ]
@@ -34,18 +34,18 @@ const Skills = () => {
         {
             title: "Hardware & Platforms",
             skills: [
-                { name: "ESP32", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Espressif_Systems_logo.svg/320px-Espressif_Systems_logo.svg.png" },
-                { name: "STM32", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/ST_Microelectronics_Logo.svg/320px-ST_Microelectronics_Logo.svg.png" },
-                { name: "Nordic Semi", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Nordic_Semiconductor_logo.svg/320px-Nordic_Semiconductor_logo.svg.png" },
+                { name: "Espressif", icon: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Espressif_Logo.svg" },
+                { name: "ST Micro", icon: "https://upload.wikimedia.org/wikipedia/commons/1/1b/ST_logo_2020_blue_V.svg" },
+                { name: "Nordic Semi", icon: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Nordic_Semiconductor_Company_Logo.svg" },
                 { name: "Raspberry Pi", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg" },
-                { name: "Altium", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Altium_Logo_2017.svg/320px-Altium_Logo_2017.svg.png" },
-                { name: "KiCad", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/KiCad-Logo.svg/320px-KiCad-Logo.svg.png" }
+                { name: "Altium", icon: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Altium_Logo.svg" },
+                { name: "KiCad", icon: "https://upload.wikimedia.org/wikipedia/commons/5/59/KiCad-Logo.svg" }
             ]
         }
     ];
 
     return (
-        <section id="skills" className="section">
+        <section id="skills" className="section bg-secondary">
             <div className="container">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
