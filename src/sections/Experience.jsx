@@ -10,63 +10,44 @@ const Experience = () => {
             company: "Miota",
             period: "2023 - Present",
             location: "Jakarta, Indonesia (Hybrid)",
-            desc: "Leading engineering division for end-to-end IoT solutions. Architecting mass-scale deployments for utilities and industrial safety.",
-            technologies: ["WiFi HaLow", "Satellite IoT", "Biometrics", "Embedded Linux", "Team Leadership"],
-            highlights: [
-                "Achieved 3x coverage vs conventional mesh using WiFi HaLow for smart metering.",
-                "Implemented direct-to-satellite IoT monitoring (Starlink) for remote industrial assets.",
-                "Developed high-precision Bridge Collision Avoidance System using sensor fusion (LiDAR, Water Current).",
-                "Built Palm Secure IR/Optical vein recognition systems for high-security access control."
-            ]
+            desc: "Leading the engineering division to architect end-to-end IoT solutions for mass-scale deployments in utilities and industrial safety. Key achievements include deploying a WiFi HaLow mesh network delivering 3x coverage compared to conventional systems, implementing direct-to-satellite monitoring for remote assets via Starlink, and developing a high-precision Bridge Collision Avoidance System using multi-sensor fusion (LiDAR, Water Current).",
+            technologies: ["WiFi HaLow", "Satellite IoT", "Biometrics", "Embedded Linux", "Team Leadership"]
         },
         {
             role: "Solutions Architect & Technical Lead",
             company: "PT. NTT Indonesia Technology",
             period: "2019 - 2023",
             location: "Jakarta, Indonesia",
-            desc: "Led pre-sales activities for large-scale Smart City and Enterprise IoT solutions.",
-            technologies: ["Computer Vision", "Smart City", "Data Analytics", "System Architecture"],
-            highlights: [
-                "Led design of Smart Traffic Systems using CCTV analytics for vehicle counting & congestion prediction.",
-                "Architected unified dashboard solutions for city-wide sensor networks.",
-            ]
+            desc: "Led technical pre-sales and solution architecture for large-scale Smart City and Enterprise IoT projects. Designed comprehensive Smart Traffic Systems utilizing CCTV analytics for real-time congestion prediction and vehicle counting, and architected unified dashboards for city-wide sensor networks to enhance urban management efficiency.",
+            technologies: ["Computer Vision", "Smart City", "Data Analytics", "System Architecture"]
         },
         {
             role: "Embedded System Engineer",
             company: "Bukalapak",
             period: "2018 - 2019",
             location: "Jakarta, Indonesia",
-            desc: "Developed hardware-software integration for logistics automation and fintech kiosks.",
-            technologies: ["Robotics (AGV)", "Raspberry Pi", "OpenCV", "Edge AI", "MQTT"],
-            highlights: [
-                "Developed Automated Guided Vehicles (AGV) with QR-navigation for warehouse automation.",
-                "Built AI-assisted smart cameras for localized object detection using Raspberry Pi & OpenCV.",
-                "Integrated hardware control for bill acceptors in fintech kiosk machines."
-            ]
+            desc: "Engineered hardware-software integration for logistics automation and fintech infrastructure. Notable contributions include developing QR-navigated Automated Guided Vehicles (AGVs) to optimize warehouse operations and building AI-assisted smart cameras on Raspberry Pi for localized object detection and analytics.",
+            technologies: ["Robotics (AGV)", "Raspberry Pi", "OpenCV", "Edge AI", "MQTT"]
         },
         {
             role: "Software Engineer",
             company: "Wirecard",
             period: "2018",
             location: "Jakarta, Indonesia",
-            desc: "Firmware development for secure payment terminals.",
-            technologies: ["Embedded C/C++", "EMV Level 1/2", "PCI-DSS", "Verifone OS"],
-            highlights: [
-                "Developed secure firmware for EDC/POS terminals.",
-                "Ensured compliance with EMV and PCI-DSS security standards for financial transactions."
-            ]
+            desc: "Developed secure firmware for EMV-compliant payment terminals (EDC/POS), ensuring strict adherence to PCI-DSS security standards for financial transactions and robust device communication protocols.",
+            technologies: ["Embedded C/C++", "EMV Level 1/2", "PCI-DSS", "Verifone OS"]
         }
     ];
 
     return (
-        <section id="experience" className="section bg-secondary-dark">
+        <section id="experience" className="section">
             <div className="container">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="mb-16"
+                    className="section-header"
                 >
                     <span className="section-badge">Career Path</span>
                     <h2 className="section-title">Professional Experience</h2>
@@ -110,13 +91,9 @@ const Experience = () => {
                                     </div>
                                 </div>
 
-                                <p className="exp-desc">{exp.desc}</p>
-
-                                <ul className="exp-highlights">
-                                    {exp.highlights.map((item, i) => (
-                                        <li key={i}>{item}</li>
-                                    ))}
-                                </ul>
+                                <p className="exp-desc leading-relaxed text-slate-300 mb-6">
+                                    {exp.desc}
+                                </p>
 
                                 <div className="exp-tech-stack">
                                     {exp.technologies.map((tech, i) => (

@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
-import { ArrowRight, Github, Mail, User } from 'lucide-react';
+import { ArrowRight, Github, Mail, User, FileText } from 'lucide-react';
 import { FaLinkedin } from 'react-icons/fa';
 import NetworkBackground from '../components/NetworkBackground';
 import '../styles/Hero.css';
@@ -48,6 +48,15 @@ const Hero = () => {
                                 className="btn-secondary"
                             >
                                 Contact Me <Mail size={18} />
+                            </a>
+
+                            <a
+                                href="/resume.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn-secondary"
+                            >
+                                Download Resume <FileText size={18} />
                             </a>
                         </div>
 

@@ -26,7 +26,7 @@ const About = () => {
     ];
 
     return (
-        <section id="about" className="section">
+        <section id="about" className="section bg-secondary">
             <div className="container">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

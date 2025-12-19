@@ -26,7 +26,7 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="section">
+        <section id="contact" className="section bg-secondary">
             <div className="container">
                 <div className="contact-container">
                     <motion.div
