@@ -9,13 +9,15 @@ const About = () => {
             degree: "M.Sc. in Embedded Systems",
             school: "TU Delft (Delft University of Technology)",
             year: "2017",
-            desc: "Thesis: Performance evaluation of LoRaWAN: From small-scale to large-scale networks."
+            desc: "Thesis: Performance evaluation of LoRaWAN: From small-scale to large-scale networks.",
+            logo: "https://upload.wikimedia.org/wikipedia/en/9/98/Delft_University_of_Technology_logo.svg"
         },
         {
             degree: "B.Sc. in Physics",
             school: "Bandung Institute of Technology (ITB)",
             year: "2013",
-            desc: "Thesis: Development of Portable Wireless Electroencephalograph (EEG) Acquisition System."
+            desc: "Thesis: Development of Portable Wireless Electroencephalograph (EEG) Acquisition System.",
+            logo: "https://upload.wikimedia.org/wikipedia/id/9/95/Logo_Institut_Teknologi_Bandung.png"
         }
     ];
 
@@ -102,8 +104,12 @@ const About = () => {
 
                         {education.map((edu, index) => (
                             <div key={index} className="glass-card edu-card group">
-                                <div className="edu-icon-bg">
-                                    <BookOpen size={100} />
+                                <div className="edu-logo-bg">
+                                    <img
+                                        src={edu.logo}
+                                        alt=""
+                                        className="edu-bg-logo"
+                                    />
                                 </div>
                                 <div className="edu-header">
                                     <h4 className="edu-degree">{edu.degree}</h4>
