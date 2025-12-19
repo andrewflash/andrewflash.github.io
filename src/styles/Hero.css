@@ -45,6 +45,16 @@
     position: relative;
 }
 
+/* Global Image Container (Mobile First) */
+.hero-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: -1;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
 /* Desktop Grid */
 @media (min-width: 900px) {
     .hero-container {
@@ -59,6 +69,8 @@
 
     .hero-image-container {
         order: 2;
+        margin-bottom: 0;
+        margin-top: 0;
         display: flex;
         justify-content: center;
         align-items: center;

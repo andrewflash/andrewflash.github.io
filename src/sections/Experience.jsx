@@ -8,12 +8,12 @@ const Experience = () => {
         {
             role: "Head of R&D IoT Hardware and Connectivity",
             company: "Miota",
-            period: "2023 - Present",
+            period: "2024 - Present",
             location: "Jakarta, Indonesia (Hybrid)",
             logo: "/logos/miota.svg",
             fallback: "https://ui-avatars.com/api/?name=Miota&background=0D8ABC&color=fff",
-            desc: "Leading the engineering division to architect end-to-end IoT solutions for mass-scale deployments in utilities and industrial safety. Key achievements include deploying a WiFi HaLow mesh network delivering 3x coverage compared to conventional systems, implementing direct-to-satellite monitoring for remote assets via Starlink, and developing a high-precision Bridge Collision Avoidance System using multi-sensor fusion (LiDAR, Water Current).",
-            technologies: ["WiFi HaLow", "Satellite IoT", "Biometrics", "Embedded Linux", "Team Leadership"]
+            desc: "Leading the engineering division to architect end-to-end IoT solutions for mass-scale deployments in utilities and industrial safety. Pioneered Multi-PHY mesh networks using proprietary ESP-NOW and implemented secure, cost-efficient OTA device management across Modbus, CAN, and Mesh interfaces. Key achievements include deploying WiFi HaLow mesh networks, direct-to-satellite Starlink monitoring, and high-precision Bridge Collision Avoidance Systems.",
+            technologies: ["WiFi HaLow", "ESP-NOW", "Multi-PHY Mesh", "Secure OTA", "Satellite IoT"]
         },
         {
             role: "Head of Technology (Consultant)",
@@ -28,12 +28,22 @@ const Experience = () => {
         {
             role: "Solutions Architect & Technical Lead",
             company: "NTT Indonesia Technology",
-            period: "2019 - 2023",
+            period: "2021 - 2024",
             location: "Jakarta, Indonesia",
             logo: "/logos/ntt.svg",
             fallback: "https://ui-avatars.com/api/?name=NTT&background=002088&color=fff",
-            desc: "Led technical pre-sales and solution architecture for large-scale Smart City and Enterprise IoT projects. Designed comprehensive Smart Traffic Systems utilizing CCTV analytics for real-time congestion prediction and vehicle counting, and architected unified dashboards for city-wide sensor networks to enhance urban management efficiency.",
-            technologies: ["Computer Vision", "Smart City", "Data Analytics", "System Architecture"]
+            desc: "Led solution architecture and technical pre-sales, driving digital transformation across manufacturing, enterprise, and public sectors. Architected end-to-end solutions integrating network infrastructure, security, cloud, and applications to support business-as-usual operations. Key achievements include designing Smart City traffic systems with CCTV analytics and unified sensor dashboards.",
+            technologies: ["Smart City", "Cloud & Security", "Network Infrastructure", "System Architecture"]
+        },
+        {
+            role: "Senior IoT Engineer",
+            company: "Miota",
+            period: "2019 - 2021",
+            location: "Jakarta, Indonesia (Hybrid)",
+            logo: "/logos/miota.svg",
+            fallback: "https://ui-avatars.com/api/?name=Miota&background=0D8ABC&color=fff",
+            desc: "Designed and architected end-to-end IoT solutions using LoRaWAN and RF Mesh, building a microservices-based network server supporting 50,000+ devices. Led the connectivity team in deploying 50,000 smart meters across Indonesia, managing RF certification (SDPPI) and customizing OpenWRT for 300+ gateways. Also developed GPS/GNSS asset tracking systems and reverse-engineered proprietary meter configurations for seamless integration.",
+            technologies: ["LoRaWAN", "Microservices", "OpenWRT", "Smart Metering", "RF Mesh"]
         },
         {
             role: "Embedded System Engineer",
@@ -42,8 +52,8 @@ const Experience = () => {
             location: "Jakarta, Indonesia",
             logo: "/logos/bukalapak.svg",
             fallback: "https://ui-avatars.com/api/?name=Bukalapak&background=E31E2D&color=fff",
-            desc: "Engineered hardware-software integration for logistics automation and fintech infrastructure. Notable contributions include developing QR-navigated Automated Guided Vehicles (AGVs) to optimize warehouse operations and building AI-assisted smart cameras on Raspberry Pi for localized object detection and analytics.",
-            technologies: ["Robotics (AGV)", "Raspberry Pi", "OpenCV", "Edge AI", "MQTT"]
+            desc: "Engineered hardware-software integration for logistics automation. Developed reliable backup connectivity for a drone delivery pilot using LoRa/LoRaWAN. Notable contributions include creating QR-navigated Automated Guided Vehicles (AGVs) to optimize warehouse operations and building AI-assisted smart cameras on Raspberry Pi for localized object detection.",
+            technologies: ["Robotics (AGV)", "LoRaWAN", "UAV/Drone", "Raspberry Pi", "Edge AI"]
         },
         {
             role: "Software Engineer",

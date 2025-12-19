@@ -158,9 +158,6 @@ const Projects = () => {
                     <span className="section-badge">Portfolio</span>
                     <h2 className="section-title">Selected Works</h2>
                     <div className="section-line"></div>
-                    <p className="section-subtitle">
-                        A collection of projects focusing on embedded systems, IoT infrastructure, and AI integration for enterprise clients.
-                    </p>
                 </motion.div>
 
                 {/* Table Header - Desktop Only */}
