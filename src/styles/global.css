@@ -60,6 +60,10 @@ ul {
     margin-bottom: 1rem;
 }
 
+.bg-secondary {
+    background-color: var(--bg-secondary);
+}
+
 /* Component Utilities */
 .text-gradient {
     background: var(--accent-gradient);
