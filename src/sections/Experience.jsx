@@ -58,7 +58,7 @@ const Experience = () => {
         {
             role: "Software Engineer",
             company: "Wirecard",
-            period: "2018",
+            period: "2014 - 2015",
             location: "Jakarta, Indonesia",
             logo: "/logos/wirecard.svg",
             fallback: "https://ui-avatars.com/api/?name=Wirecard&background=040F22&color=fff",
