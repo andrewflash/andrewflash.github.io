@@ -223,6 +223,13 @@
     opacity: 1;
 }
 
+.project-link-wrapper {
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
 .project-actions {
     display: flex;
     flex-direction: column;

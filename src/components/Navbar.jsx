@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
+import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Cpu, Sun, Moon } from 'lucide-react';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHome = location.pathname === '/';
 
   const [theme, setTheme] = useState(() => {
     if (typeof window !== 'undefined') {
@@ -29,8 +33,28 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [theme]);
 
+  // Handle hash navigation after route change
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   const toggleTheme = () => {
     setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+  };
+
+  const handleNavClick = (to) => {
+    setIsOpen(false);
+    if (!isHome) {
+      navigate(`/#${to}`);
+    }
   };
 
   const navLinks = [
@@ -46,28 +70,38 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
-        <Link to="hero" smooth={true} duration={500} className="nav-brand">
+        <div className="nav-brand" onClick={() => isHome ? window.scrollTo({ top: 0, behavior: 'smooth' }) : navigate('/')} style={{ cursor: 'pointer' }}>
           <div className="brand-icon-wrapper">
             <Cpu size={24} color="white" />
           </div>
           <span className="brand-text">
             Andri<span className="brand-dot">Rahmadhani</span>
           </span>
-        </Link>
+        </div>
 
         {/* Desktop Menu */}
         <div className="nav-menu-desktop">
           {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.to}
-              smooth={true}
-              duration={500}
-              offset={-70}
-              className="nav-link"
-            >
-              {link.name}
-            </Link>
+            isHome ? (
+              <ScrollLink
+                key={link.name}
+                to={link.to}
+                smooth={true}
+                duration={500}
+                offset={-70}
+                className="nav-link"
+              >
+                {link.name}
+              </ScrollLink>
+            ) : (
+              <RouterLink
+                key={link.name}
+                to={`/#${link.to}`}
+                className="nav-link"
+              >
+                {link.name}
+              </RouterLink>
+            )
           ))}
           <button
             onClick={toggleTheme}
@@ -102,17 +136,28 @@ const Navbar = () => {
       {isOpen && (
         <div className="nav-menu-mobile">
           {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.to}
-              smooth={true}
-              duration={500}
-              offset={-70}
-              onClick={() => setIsOpen(false)}
-              className="mobile-link"
-            >
-              {link.name}
-            </Link>
+            isHome ? (
+              <ScrollLink
+                key={link.name}
+                to={link.to}
+                smooth={true}
+                duration={500}
+                offset={-70}
+                onClick={() => setIsOpen(false)}
+                className="mobile-link"
+              >
+                {link.name}
+              </ScrollLink>
+            ) : (
+              <RouterLink
+                key={link.name}
+                to={`/#${link.to}`}
+                onClick={() => setIsOpen(false)}
+                className="mobile-link"
+              >
+                {link.name}
+              </RouterLink>
+            )
           ))}
         </div>
       )}
