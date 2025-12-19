@@ -72,7 +72,7 @@ const Research = () => {
     ].sort((a, b) => b.year - a.year);
 
     return (
-        <section id="research" className="section bg-secondary">
+        <section id="research" className="section">
             <div className="bg-glow"></div>
 
             <div className="container">

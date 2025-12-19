@@ -192,7 +192,7 @@ const Projects = () => {
     const [openIndex, setOpenIndex] = useState(0); // Default open the first one
 
     return (
-        <section id="projects" className="section">
+        <section id="projects" className="section bg-secondary">
             <div className="container">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
