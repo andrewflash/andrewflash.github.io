@@ -26,7 +26,7 @@ const Experience = () => {
             technologies: ["Biometrics", "IoT", "Cloud Architecture", "Hardware Design", "Team Leadership"]
         },
         {
-            role: "Solutions Architect & Technical Lead",
+            role: "Solutions Architect",
             company: "NTT Indonesia Technology",
             period: "2021 - 2024",
             location: "Jakarta, Indonesia",
