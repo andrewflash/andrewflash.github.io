@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FileText, ExternalLink, Bookmark } from 'lucide-react';
+import { FileText, ExternalLink, Bookmark, Lightbulb } from 'lucide-react';
 import '../styles/Research.css';
 
 const Research = () => {
@@ -86,6 +86,24 @@ const Research = () => {
                     <span className="section-badge">Academics</span>
                     <h2 className="section-title">Research & Publications</h2>
                     <div className="section-line"></div>
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="research-focus-summary"
+                >
+                    <div className="focus-card">
+                        <h3 className="focus-title">
+                            <Lightbulb size={24} className="text-yellow-400" style={{ filter: "drop-shadow(0 0 8px rgba(250, 204, 21, 0.4))" }} />
+                            Research Focus
+                        </h3>
+                        <p className="focus-text">
+                            Specialized in <strong>Large-scale LoRaWAN networks</strong>, <strong>collision analysis</strong>, and <strong>low-power wireless communication protocols</strong> for telemetry and sensing applications. My academic work bridges the gap between theoretical network modeling and practical industrial implementation.
+                        </p>
+                    </div>
                 </motion.div>
 
                 <div className="research-list">
