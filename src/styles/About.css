@@ -43,9 +43,7 @@
 
 
 
-.text-white {
-    color: white;
-}
+
 
 .text-highlight {
     color: var(--primary);
@@ -158,7 +156,7 @@
 .edu-degree {
     font-size: 1.125rem;
     font-weight: 700;
-    color: white;
+    color: var(--text-primary);
 }
 
 .edu-year {
@@ -172,8 +170,8 @@
 .edu-school {
     position: relative;
     z-index: 1;
-    color: #bae6fd;
-    /* light sky blue */
+    color: var(--primary);
+    /* Adapted for theme */
     margin-bottom: 0.5rem;
 }
 
@@ -192,9 +190,21 @@
 .research-title {
     font-size: 1.125rem;
     font-weight: 700;
-    color: white;
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+[data-theme='light'] .edu-logo-bg {
+    filter: grayscale(100%);
+    /* No invert for light mode */
+    opacity: 0.1;
+}
+
+[data-theme='light'] .edu-card:hover .edu-logo-bg {
+    filter: grayscale(0%);
+    /* Restore original colors */
+    opacity: 0.2;
 }

@@ -25,9 +25,28 @@ const ParticleNetwork = ({ count = 100, connectionDistance = 2 }) => {
         return temp;
     }, [count]);
 
+    const [particleColor, setParticleColor] = React.useState('#64ffda');
+
+    React.useEffect(() => {
+        const updateColor = () => {
+            const style = getComputedStyle(document.documentElement);
+            const primary = style.getPropertyValue('--primary').trim();
+            if (primary) setParticleColor(primary);
+        };
+
+        updateColor();
+
+        // Observer for theme changes
+        const observer = new MutationObserver(updateColor);
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+        return () => observer.disconnect();
+    }, []);
+
     const dummy = useMemo(() => new THREE.Object3D(), []);
     const pointsGeometry = useMemo(() => new THREE.SphereGeometry(0.05, 8, 8), []);
-    const pointsMaterial = useMemo(() => new THREE.MeshBasicMaterial({ color: '#64ffda', transparent: true, opacity: 0.8 }), []);
+    // Re-create material when color changes
+    const pointsMaterial = useMemo(() => new THREE.MeshBasicMaterial({ color: particleColor, transparent: true, opacity: 0.8 }), [particleColor]);
 
     useFrame((state) => {
         if (!mesh.current || !linesGeometry.current) return;
@@ -80,7 +99,7 @@ const ParticleNetwork = ({ count = 100, connectionDistance = 2 }) => {
             <instancedMesh ref={mesh} args={[pointsGeometry, pointsMaterial, count]} />
             <lineSegments>
                 <bufferGeometry ref={linesGeometry} />
-                <lineBasicMaterial color="#64ffda" transparent opacity={0.15} />
+                <lineBasicMaterial color={particleColor} transparent opacity={0.15} />
             </lineSegments>
         </>
     );
