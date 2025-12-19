@@ -158,3 +158,13 @@
         max-width: 100%;
     }
 }
+
+[data-theme='light'] .research-item {
+    background: rgba(255, 255, 255, 0.6);
+    border-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='light'] .research-item:hover {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+}

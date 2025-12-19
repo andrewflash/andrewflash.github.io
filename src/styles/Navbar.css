@@ -18,6 +18,12 @@
     border-bottom: 1px solid var(--glass-border);
 }
 
+[data-theme='light'] .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
 .nav-container {
     max-width: var(--container-width);
     margin: 0 auto;
@@ -54,7 +60,7 @@
     font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: -0.02em;
-    color: white;
+    color: var(--text-primary);
 }
 
 .brand-dot {
@@ -65,6 +71,7 @@
 .nav-menu-desktop {
     display: none;
     gap: 2rem;
+    align-items: center;
 }
 
 @media (min-width: 768px) {
@@ -111,14 +118,10 @@
 }
 
 .mobile-toggle:hover {
-    color: white;
+    color: var(--primary);
 }
 
-@media (min-width: 768px) {
-    .mobile-toggle {
-        display: none;
-    }
-}
+
 
 /* Mobile Menu */
 .nav-menu-mobile {
@@ -158,4 +161,39 @@
     color: var(--primary);
     background: rgba(255, 255, 255, 0.05);
     padding-left: 2.5rem;
+}
+
+/* Theme Toggle & Mobile Actions */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.theme-toggle:hover {
+    color: var(--primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.mobile-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .mobile-actions {
+        display: none;
+    }
+}
+
+.mobile-theme-btn {
+    padding: 0;
 }

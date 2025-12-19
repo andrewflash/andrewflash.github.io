@@ -29,7 +29,7 @@ const Hero = () => {
                         </h1>
 
                         <p className="hero-subtitle">
-                            <span className="text-white font-medium">R&D IoT and Embedded Systems</span> specialized in <span className="highlight">Advanced Wireless Protocols</span> (WiFi, Bluetooth&reg;, LoRa, Zigbee, Thread, Mesh, GSM) and <span className="highlight">Industrial IoT Infrastructure</span>.
+                            <span className="text-primary font-medium">R&D IoT and Embedded Systems</span> specialized in <span className="highlight">Advanced Wireless Protocols</span> (WiFi, Bluetooth&reg;, LoRa, Zigbee, Thread, Mesh, GSM) and <span className="highlight">Industrial IoT Infrastructure</span>.
                         </p>
 
                         <div className="hero-actions">

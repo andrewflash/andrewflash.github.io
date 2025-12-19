@@ -27,6 +27,10 @@
     background: radial-gradient(circle at 50% 50%, rgba(20, 30, 48, 0.4) 0%, rgba(10, 25, 47, 0.95) 100%);
 }
 
+[data-theme='light'] .hero-bg {
+    background: radial-gradient(circle at 50% 50%, rgba(241, 245, 249, 0.4) 0%, rgba(248, 250, 252, 0.95) 100%);
+}
+
 /* Content Wrapper using Grid/Flex */
 .hero-container {
     display: grid;

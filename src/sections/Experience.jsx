@@ -15,7 +15,7 @@ const Experience = () => {
         },
         {
             role: "Solutions Architect & Technical Lead",
-            company: "PT. NTT Indonesia Technology",
+            company: "NTT Indonesia Technology",
             period: "2019 - 2023",
             location: "Jakarta, Indonesia",
             desc: "Led technical pre-sales and solution architecture for large-scale Smart City and Enterprise IoT projects. Designed comprehensive Smart Traffic Systems utilizing CCTV analytics for real-time congestion prediction and vehicle counting, and architected unified dashboards for city-wide sensor networks to enhance urban management efficiency.",

@@ -65,6 +65,10 @@ ul {
 }
 
 /* Component Utilities */
+.text-primary {
+    color: var(--text-primary);
+}
+
 .text-gradient {
     background: var(--accent-gradient);
     -webkit-background-clip: text;

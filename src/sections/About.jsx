@@ -50,8 +50,9 @@ const About = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
 
+
                         <p className="text-lead">
-                            I am a <span className="text-white font-medium">Head of R&D IoT Hardware and Connectivity</span> and <span className="text-white font-medium">Technical Lead</span> with over <span className="text-highlight">10+ years</span> of experience in building large-scale connected systems.
+                            I am a <span className="font-medium text-primary">Head of R&D IoT Hardware and Connectivity</span> and <span className="font-medium text-primary">Technical Lead</span> with over <span className="text-highlight">10+ years</span> of experience in building large-scale connected systems.
                         </p>
                         <p className="text-lead">
                             Currently leading engineering at <span className="text-highlight">Miota</span>, I architect solutions that bridge the gap between low-level hardware constraints and high-availability cloud infrastructure. My expertise spans from designing custom <span className="text-highlight">WiFi HaLow</span> mesh networks to deploying industrial safety systems powered by <span className="text-highlight">Sensor Fusion</span>.

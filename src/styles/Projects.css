@@ -106,7 +106,7 @@
 }
 
 .col-title {
-    color: white;
+    color: var(--text-primary);
     font-weight: 600;
     font-size: 1.1rem;
     transition: color 0.3s;
@@ -135,7 +135,7 @@
 }
 
 .project-row:hover .col-action {
-    color: white;
+    color: var(--text-primary);
 }
 
 /* Expanded Content */
