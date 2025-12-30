@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { ArrowRight, Github, Mail, User, FileText } from 'lucide-react';
+import { ArrowRight, Github, Mail, User, FileText } from 'lucide-react';
 import { FaLinkedin } from 'react-icons/fa';
 import NetworkBackground from '../components/NetworkBackground';
 import '../styles/Hero.css';
@@ -49,8 +50,6 @@ const Hero = () => {
                             >
                                 Contact Me <Mail size={18} />
                             </a>
-
-
                         </div>
 
                         <div className="hero-socials">
