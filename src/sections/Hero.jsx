@@ -50,14 +50,7 @@ const Hero = () => {
                                 Contact Me <Mail size={18} />
                             </a>
 
-                            <a
-                                href="/resume.pdf"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn-secondary"
-                            >
-                                Download Resume <FileText size={18} />
-                            </a>
+
                         </div>
 
                         <div className="hero-socials">
