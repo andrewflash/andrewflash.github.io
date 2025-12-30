@@ -2,9 +2,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
-import { ArrowRight, Github, Mail, User, FileText } from 'lucide-react';
-import { ArrowRight, Github, Mail, User, FileText } from 'lucide-react';
-import { FaLinkedin } from 'react-icons/fa';
+import { ArrowRight, Mail, User } from 'lucide-react';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import NetworkBackground from '../components/NetworkBackground';
 import '../styles/Hero.css';
 
@@ -54,7 +53,7 @@ const Hero = () => {
 
                         <div className="hero-socials">
                             <a href="https://github.com/andrewflash" target="_blank" rel="noopener noreferrer" className="social-link">
-                                <Github size={28} />
+                                <FaGithub size={28} />
                             </a>
                             <a href="https://id.linkedin.com/in/andrirahmadhani" target="_blank" rel="noopener noreferrer" className="social-link">
                                 <FaLinkedin size={28} />
